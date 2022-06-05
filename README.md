@@ -1,0 +1,8 @@
+❌ = error
+🆘 = getting help
+ℹ️ = info
+🔆 = good to know
+
+methods vs expressions
+expressions are generic and apply to many types
+methods are type-specific
