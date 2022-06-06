@@ -20,6 +20,7 @@ def firstlast(items):
     while items != None: 
         for i,v in enumerate(items):
             first = items[0]
+            # [-1] aka negative indexings
             last = items [- 1]
             len_counter += 1
         print("first", "==>",first, "last=>" ,last)
