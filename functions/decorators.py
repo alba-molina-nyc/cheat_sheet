@@ -43,3 +43,51 @@ def print_msg(message):
 func = print_msg("python is da best")
 func()
 
+"""DECORATOR FUNCTIONS BELOW"""
+
+def printer():                  # first function
+    print("Hello world")
+
+def display_info(func):         # decorator function that takes in a function, pass in func
+
+
+    def inner():
+        print("executing", func.__name__, "function") # func.__name__ is a dunder
+        func()                  # calling functuon
+        print("finished executing") # after function is executed 
+
+    return inner            
+
+printer()           # run printer function here
+decorated_func = display_info(printer)          #use decorator function to run the same printer function this time
+decorated_func()        # call the decorated_func
+
+
+"""
+code of above def printer(): code
+when decorated_func = display_info(printer) gets called with the printer function which gets converted into the func argument
+the inner function gets executed calls the func parameter and then gets executed 
+as you can see the function was not changed there is a more elegant way of writing the above using decorators aka @
+"""
+
+
+"""BELOW USES @ SYMBOL to do the exact same thing that the above code did"""
+
+def printer():               
+    print("Hello world")
+
+def display_info(func):        
+
+
+    def inner():
+        print("executing", func.__name__, "function") 
+        func()                
+        print("finished executing") 
+
+    return inner     
+
+@display_info
+def printer():
+    print("Hello world!")       
+
+
