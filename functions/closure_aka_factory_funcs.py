@@ -15,3 +15,6 @@ f = maker(2)                        # pass 2 to N argument
 print(f)
 print(f(3))                         # pass 3 to X
 """FACTORY FUNCTIONS are used by programs that need to generate event handlers on the fly in response to conditions at runtime """
+
+
+# also check decorators.py
